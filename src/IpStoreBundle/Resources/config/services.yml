@@ -1,0 +1,14 @@
+services:
+    call.method.webcallprovider:
+        class: App\IpStoreBundle\WebCallProvider
+        tags:
+            - { name: call.method }
+    call.method.apicallprovider:
+        class: App\IpStoreBundle\ApiCallProvider
+        tags:
+            - { name: call.method }
+    call.context:
+        class: App\IpStoreBundle\Context
+
+    App\IpStoreBundle\IpStoreController:
+        arguments: '@call.context'

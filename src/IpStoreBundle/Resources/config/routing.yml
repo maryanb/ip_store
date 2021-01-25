@@ -1,0 +1,3 @@
+ip_store_addpage:
+    path:     /ipstore/addtostore
+    controller: App\Controller\IpStoreController::addAction
